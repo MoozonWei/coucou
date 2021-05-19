@@ -1,13 +1,34 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/usrInfo/usrInfo"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
+    "navigationBarTitleText": "凑凑",
     "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "borderStyle": "white",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "",
+      "iconPath": "resources/icon/home.png",
+      "selectedIconPath": "resources/icon/home-fill.png"
+    },
+    {
+      "pagePath": "pages/index/index",
+      "text": "",
+      "iconPath": "resources/icon/add.png",
+      "selectedIconPath": "resources/icon/add-fill.png"
+    },
+    {
+      "pagePath": "pages/usrInfo/usrInfo",
+      "text": "",
+      "iconPath": "resources/icon/bussiness-man.png",
+      "selectedIconPath": "resources/icon/bussiness-man-fill.png"
+    }]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
