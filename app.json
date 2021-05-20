@@ -9,29 +9,29 @@
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "凑凑",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json",
   "tabBar": {
-    "list": [
-      {
+    "list": [{
         "pagePath": "pages/home/home",
-        "text": "首页",
-        "iconPath": "/static/tabs/Home.png",
-        "selectedIconPath": "/static/tabs/Home.png"
+        "text": "",
+        "iconPath": "resources/icon/home.png",
+        "selectedIconPath": "resources/icon/home-fill.png"
       },
       {
         "pagePath": "pages/index/index",
-        "text": "新建",
-        "iconPath": "/static/tabs/New.png",
-        "selectedIconPath": "/static/tabs/New.png"
+        "text": "",
+        "iconPath": "resources/icon/add.png",
+        "selectedIconPath": "resources/icon/add-fill.png"
       },
       {
         "pagePath": "pages/myinfo/myinfo",
-        "text": "我的",
-        "iconPath": "/static/tabs/MyInfo.png",
-        "selectedIconPath": "/static/tabs/MyInfo.png"
+        "text": "",
+        "iconPath": "resources/icon/bussiness-man.png",
+        "selectedIconPath": "resources/icon/bussiness-man-fill.png"
+
       }
     ]
   }
