@@ -1,0 +1,16 @@
+/* pages/home/home.wxss */
+.homeNav .navScroll {
+  display: flex;
+  white-space: nowrap;
+}
+
+.homeNav .navScroll .navItem {
+  padding: 0 30rpx;
+  font-size: 32rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+
+.homeNav .navScroll .navItem .active {
+  border-bottom: 3rpx solid blue;
+}

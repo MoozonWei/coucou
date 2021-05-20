@@ -1,0 +1,18 @@
+<!--pages/home/home.wxml-->
+<view class="homeContainer">
+
+  <!-- 搜索组件 link:https://github.com/fancaixia/SearchBar -->
+  <SearchBar></SearchBar>
+
+  <!-- 顶部导航栏 -->
+  <view class="homeNav">
+    <scroll-view scroll-x="true" class="navScroll" enable-flex="true" scroll-into-view="{{'scroll' + itemId}}" scroll-with-animation="true">
+      <view id="{{'scroll' + item.id}}" class="navItem" wx:for="{{navList}}" wx:key="id">
+        <view class="navContent {{itemId === item.id?'active':''}}" bindtap="ItemSelected" id="{{item.id}}" data-id="{{item.id}}">
+          {{item.name}}
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+
+</view>
