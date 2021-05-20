@@ -6,9 +6,9 @@
 
   <!-- 顶部导航栏 -->
   <view class="homeNav">
-    <scroll-view scroll-x="true" class="navScroll" enable-flex="true" scroll-into-view="{{'scroll' + itemId}}" scroll-with-animation="true">
+    <scroll-view scroll-x="true" class="navScroll" enable-flex="true" scroll-left="{{scrollLeft}}" scroll-with-animation="true">
       <view id="{{'scroll' + item.id}}" class="navItem" wx:for="{{navList}}" wx:key="id">
-        <view class="navContent {{itemId === item.id?'active':''}}" bindtap="ItemSelected" id="{{item.id}}" data-id="{{item.id}}">
+        <view class="navContent {{itemId === item.id?'active':''}}" id="{{'scrollContent' + item.id}}" bindtap="ItemSelected"  data-id="{{item.id}}">
           {{item.name}}
         </view>
       </view>

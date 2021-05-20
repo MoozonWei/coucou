@@ -6,49 +6,58 @@ Page({
    */
   data: {
     "navList": [{
-      "id" : 0,
-      "name" : "推荐"
-    },{
-      "id" : 1,
-      "name" : "关注"
-    },{
-      "id" : 2,
-      "name" : "学习"
-    },{
-      "id" : 3,
-      "name" : "运动"
-    },{
-      "id" : 4,
-      "name" : "考研"
-    },{
-      "id" : 5,
-      "name" : "读书"
-    },{
-      "id" : 6,
-      "name" : "电影"
-    },{
-      "id" : 7,
-      "name" : "TEST"
-    },{
-      "id" : 8,
-      "name" : "TEST"
-    },{
-      "id" : 9,
-      "name" : "TEST"
+      "id": 0,
+      "name": "推荐"
+    }, {
+      "id": 1,
+      "name": "关注"
+    }, {
+      "id": 2,
+      "name": "学习"
+    }, {
+      "id": 3,
+      "name": "运动"
+    }, {
+      "id": 4,
+      "name": "考研"
+    }, {
+      "id": 5,
+      "name": "读书"
+    }, {
+      "id": 6,
+      "name": "电影"
+    }, {
+      "id": 7,
+      "name": "TEST"
+    }, {
+      "id": 8,
+      "name": "TEST"
+    }, {
+      "id": 9,
+      "name": "TEST"
     }],
-    "itemId" : 0,
-    "moveParams": {
-      "scrollLeft": 0
-    }
+    "itemId": 0,
+    "scrollLeft": 0
   },
 
 
   ItemSelected(event) {
-    this.setData ({
-      itemId : parseInt(event.currentTarget.id)
+    let query = wx.createSelectorQuery()
+    let id = event.currentTarget.id
+    console.log(id)
+    let viewWidth = 0
+    query.select('#' + id).boundingClientRect(function (rect) {
+      viewWidth = rect.width
+    }).exec(() => {
+      let offsetLeft = event.currentTarget.offsetLeft
+      let sL = offsetLeft - this.data.scrollViewWidth / 2 + viewWidth / 2
+      this.setData({
+        scrollLeft: sL,
+        itemId: event.currentTarget.dataset.id
+      })
     })
-  },
 
+  },
 
   /**
    * 生命周期函数--监听页面加载
@@ -61,7 +70,9 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    wx.createSelectorQuery().select(".navScroll").boundingClientRect((rect) => {
+      this.data.scrollViewWidth = Math.round(rect.width)
+    }).exec()
   },
 
   /**
