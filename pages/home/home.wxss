@@ -1,16 +1,19 @@
 /* pages/home/home.wxss */
-.homeNav .navScroll {
-  display: flex;
-  white-space: nowrap;
+
+.contentCard {
+  margin-top: 30rpx;
 }
 
-.homeNav .navScroll .navItem {
-  padding: 0 30rpx;
-  font-size: 32rpx;
-  height: 60rpx;
-  line-height: 60rpx;
+.contentCard .cardList {
+  margin-bottom: 10rpx;
 }
 
-.homeNav .navScroll .navItem .active {
-  border-bottom: 3rpx solid blue;
+/* 设置卡片中的图片大小 */
+.contentCard .cardList .right-card {
+  height: 100rpx;
+}
+
+.contentCard .cardList .cardText {
+  padding-top: 20rpx;
+  font-size: 40rpx;
 }

@@ -1,0 +1,22 @@
+{
+  "name": "coucou",
+  "version": "1.0.0",
+  "description": "lin ui : https://doc.mini.talelin.com/start/",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MoozonWei/coucou.git"
+  },
+  "author": "kksy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MoozonWei/coucou/issues"
+  },
+  "homepage": "https://github.com/MoozonWei/coucou#readme",
+  "dependencies": {
+    "lin-ui": "^0.9.4"
+  }
+}
