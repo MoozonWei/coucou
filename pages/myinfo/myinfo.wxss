@@ -1,1 +1,17 @@
 /* pages/myinfo/myinfo.wxss */
+open-data[type=userAvatarUrl]{
+  width: 100%;
+  height:100%;
+  display:block;
+  overflow:hidden;
+  border-radius: 50%;
+}
+
+.userText {
+  padding-left: 20px;
+}
+
+.icon {
+  width: 30%;
+  height: 40%;
+}
