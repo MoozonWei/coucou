@@ -16,7 +16,8 @@
         <scroll-view class="cardScroll" style="height: auto">
           <view class="cardList" wx:for="{{currList}}" wx:key="id">
             <l-card type="primary" position="right" l-img-class="right-card" image="/resources/icon/arraw.png"
-              image-mode="right">
+              image-mode="right"
+              bindtap="navigateToRoom" data-name="{{item.name}}">
               <view class="cardText">{{item.name}}</view>
             </l-card>
           </view>

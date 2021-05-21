@@ -1,0 +1,38 @@
+<!--pages/rooms/rooms.wxml-->
+<view class="room-container">
+
+  <view class="top-info">
+    <!-- 当前房间数 -->
+    <view style="flex:1;">当前房间数：{{currRoomCount}}</view>
+    <l-icon name="research"></l-icon>
+  </view>
+
+  <!-- 分割线 -->
+  <view style="height:6rpx;background-color:#F3F3F3;margin-bottom:10rpx"></view>
+
+  <!-- avator -->
+  <view class="avatarCardContainer">
+    <!-- 性别 0 为男， 1 为女, 数据来源为currCardContext-->
+    <l-card type="avatar" l-class="card" image="{{item.sex == 0 ? '/resources/avatar/avator_boy.png' : '/resources/avatar/avator_girl.png' }}" title="{{item.username}}" describe="18个小时前"
+      wx:for="{{currCardContext}}" wx:key="id">
+      <!-- 此处为content -->
+      <view class="avter-content">
+        <text style="font-weight:bold; font-size:32rpx">{{item.title}}\n</text>
+        <text>{{item.description}}</text>
+      </view>
+      <view class="avter-share-container">
+        <view class="like-container">
+          <view class="number">人数：{{item.count}}</view>
+        </view>
+        <view class="like-container">
+          <l-icon name="default" color="#666" size="28" />
+          <view class="number">{{item.comment}}评论</view>
+        </view>
+      </view>
+      <l-tag shape="circle" bg-color="#f3f3f3" font-color="#3963BC" slot="more" size="large">
+        + 加入
+      </l-tag>
+    </l-card>
+  </view>
+
+</view>

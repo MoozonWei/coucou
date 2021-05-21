@@ -33,3 +33,19 @@ npm install
 
 项目配置勾选 **增强编译**
 
+
+
+# V 1.0
+
+完成进度：首页页面和房间页面
+
+<figure>
+    <img src=".\resources\image\home.png" width=400px><img src=".\resources\image\room.png" width=400px>
+</figure>
+
+
+
+
+
+
+
