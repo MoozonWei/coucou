@@ -29,7 +29,7 @@
           <view class="number">{{item.comment}}评论</view>
         </view>
       </view>
-      <l-tag shape="circle" bg-color="#f3f3f3" font-color="#3963BC" slot="more" size="large">
+      <l-tag shape="circle" bg-color="#f3f3f3" font-color="#3963BC" slot="more" size="large" bindtap="navigateToTalk">
         + 加入
       </l-tag>
     </l-card>
