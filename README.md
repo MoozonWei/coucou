@@ -46,6 +46,13 @@ npm install
 
 
 
+# v1.0.1
+
+创建讨论区静态页面
+
+<figure>
+    <img src="./resources/image/talk_static.png" width="400">
+</figure>
 
 
 
