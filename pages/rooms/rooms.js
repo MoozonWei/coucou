@@ -15,8 +15,10 @@ Page({
       "sex" : 0,
       "username" : "kksy",
       "time" : "10小时前",
+      "date" : "2021/6/1",
       "title" : "体育管乒乓球",
       "description": "菜鸟一枚，有人吗，费用平分",
+      "detail" : "我是详情，啊啊啊啊啊",
       "count" : "1/4",
       "comment" : 2
     },{
@@ -24,8 +26,10 @@ Page({
       "sex" : 1,
       "username" : "silvengs",
       "time" : "8小时前",
+      "date" : "2021/6/1",
       "title" : "体育馆二楼乒乓球，下午有时间",
       "description": "技术还可以，高手来，训练为目的",
+      "detail" : "我是详情，啊啊啊啊啊",
       "count" : "1/4",
       "comment" : 3
     }],
@@ -34,8 +38,10 @@ Page({
       "sex" : 0,
       "username" : "kksy",
       "time" : "10小时前",
+      "date" : "2021/6/1",
       "title" : "校内体院馆羽毛球",
       "description": "菜鸟一枚，有人吗",
+      "detail" : "我是详情，啊啊啊啊啊",
       "count" : "1/4",
       "comment" : 2
     },{
@@ -43,8 +49,10 @@ Page({
       "sex" : 1,
       "username" : "silvengs",
       "time" : "8小时前",
+      "date" : "2021/6/1",
       "title" : "校外下午",
       "description": "技术还可以，有人一起吗，费用平分",
+      "detail" : "我是详情，啊啊啊啊啊",
       "count" : "1/4",
       "comment" : 3
     },{
@@ -52,8 +60,10 @@ Page({
       "sex" : 1,
       "username" : "KK",
       "time" : "12小时前",
+      "date" : "2021/6/1",
       "title" : "校外下午",
       "description": "双打，4缺2，萌新大佬都可以开，玩的开心最重要",
+      "detail" : "我是详情，啊啊啊啊啊",
       "count" : "2/4",
       "comment" : 6
     }],
@@ -62,8 +72,10 @@ Page({
       "sex" : 0,
       "username" : "kksy",
       "time" : "10小时前",
+      "date" : "2021/6/1",
       "title" : "校内网球",
       "description": "菜鸟一枚，有人吗",
+      "detail" : "我是详情，啊啊啊啊啊",
       "count" : "1/4",
       "comment" : 2
     },{
@@ -71,14 +83,14 @@ Page({
       "sex" : 1,
       "username" : "silvengs",
       "time" : "8小时前",
+      "date" : "2021/6/1",
       "title" : "校外网球",
       "description": "技术还可以，有人一起吗，费用平分",
+      "detail" : "我是详情，啊啊啊啊啊",
       "count" : "1/4",
       "comment" : 3
     }],
-    "testList" : [
-
-    ],
+    "testList" : [],
     // 当前房间数
     "currRoomCount" : 0,
     // 当前卡片，例如：乒乓球
@@ -91,6 +103,13 @@ Page({
    * 跳转至讨论界面
    */
   navigateToTalk() {
+    wx.request({
+      url: 'https://coucou.com/rooms?data=testData',
+      dataType: 'json',
+      success(res) {
+        console.log(res)
+      }
+    })
     let naviUrl = '/pages/talk/talk'
     wx.navigateTo({
       url: naviUrl
@@ -120,7 +139,6 @@ Page({
         currRoomCount: 0,
         currCardContext: []
       })
-
       return
     }
 
