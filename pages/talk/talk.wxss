@@ -23,20 +23,20 @@ page {
   /* -webkit-line-clamp: 5; */
 }
 
-.avter-share-container{
+.avter-share-container {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
 }
 
-.like-container{
+.like-container {
   display: flex;
   flex-direction: row;
   margin-left: 40rpx;
   align-items: center
 }
 
-.number{
+.number {
   color: #666;
   font-size: 24rpx;
   margin-left: 12rpx;
@@ -52,14 +52,20 @@ page {
 
 .talk-top {
   font-size: 30rpx;
-  margin-left: 40rpx;
+  margin-left: 15rpx;
   color: #333;
   padding: 10rpx 0;
 }
 
+.talk-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .talk-bottom {
   border-style: solid;
-  box-shadow:0px 2px 4px 2px #DDDDDD;
+  box-shadow: 0px 2px 4px 2px #DDDDDD;
   border-width: 0rpx;
   position: fixed;
   display: flex;
@@ -68,4 +74,3 @@ page {
   height: 100rpx;
   width: 100%;
 }
-

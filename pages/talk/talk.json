@@ -9,7 +9,8 @@
     "l-tag": "/miniprogram_npm/lin-ui/tag/index",
     "l-icon" : "/miniprogram_npm/lin-ui/icon/index",
     "l-loadmore" : "/miniprogram_npm/lin-ui/loadmore/index",
-    "l-button" : "/miniprogram_npm/lin-ui/button/index"
+    "l-button" : "/miniprogram_npm/lin-ui/button/index",
+    "l-loading" : "/miniprogram_npm/lin-ui/loading/index"
   },
   "navigationBarTitleText": ""
 }

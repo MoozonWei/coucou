@@ -5,33 +5,46 @@
 
 # Lin UI
 
-[快速上手]: https://doc.mini.talelin.com/start/
+使用[Lin UI](https://doc.mini.talelin.com/start/)组件来搭建主要界面
 
-安装模块
+1. 安装模块
 
-```shell
-npm install
-```
+   ```shell
+   npm install
+   ```
 
-点击**工具**选项，选择**构建npm**，生成miniprogram_npm文件夹
+   点击**工具**选项，选择**构建npm**，生成**miniprogram_npm**文件夹
 
-> 配置中引入
->
-> ```json
-> {
->   "usingComponents":{
->     "l-button":"/miniprogram_npm/lin-ui/button/index"
->   }
-> }
-> ```
->
-> 页面中使用
->
-> ```html
-> <l-button type="default">默认按钮</l-button>
-> ```
+2. 配置中引入
 
-项目配置勾选 **增强编译**
+   ```json
+   {
+   	"usingComponents":{
+    	"l-button":"/miniprogram_npm/lin-ui/button/index"
+   }
+   ```
+
+3. 页面中使用
+
+   ```html
+   <l-button type="default">默认按钮</l-button>
+   ```
+
+4. 项目配置勾选 **增强编译**
+
+   
+
+# Mock
+
+使用[Mock](http://mockjs.com/examples.html)来模拟评论区数据
+
+调试器面板选中Mock
+
+<figure>
+    <img src=".\resources\image\Mock.png" width=600px>
+</figure>
+
+导入根目录下的**mock.config.json**
 
 
 
@@ -46,12 +59,12 @@ npm install
 
 
 
-# v1.0.1
+# v 1.0.1
 
-创建讨论区静态页面
+讨论区页面
 
 <figure>
-    <img src="./resources/image/talk_static.png" width="400">
+    <img src="./resources/image/talk.png" width="400">
 </figure>
 
 

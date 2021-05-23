@@ -4,13 +4,13 @@
 
   <!-- <scroll-view scroll-y="{{true}}" class="scroll-talk"> -->
 
-  <view class="talk-container">
+  <view class="talk-container" data="talkList">
     <!-- avatar 房间主题详细信息-->
     <l-card type="avatar" l-class="card" image="/resources/avatar/avator_boy.png" title="KKsy" describe="18个小时前"
       full="true">
       <!-- 此处为content -->
       <view class="avter-content">
-        <text>很简单，豆瓣现在这样就给大家指了一条明路:以后凡是这种国产的风口浪尖的的片子，会涉及到各方背后利益关系的片子...\n\n</text>
+        <text>乒乓球是一种由两名或四名运动员用小球拍（即乒乓球拍）在桌子上来回击打一个轻便的球，或是用乒乓球拍拍打乒乓球的球类运动，在世界上许多地方流行。</text>
         <view class="talk-info">
           <l-icon name="time" size="28"></l-icon>
           <text class="talk-info-text" space="nbsp"> 时间：</text>
@@ -34,7 +34,7 @@
         </view>
         <view class="like-container">
           <l-icon name="default" color="#666" size="28" />
-          <view class="number">10评论</view>
+          <view class="number">{{talkList.length}}评论</view>
         </view>
       </view>
       <l-tag shape="circle" bg-color="#f3f3f3" font-color="#3963BC" slot="more" size="large">
@@ -45,45 +45,21 @@
     <!-- 分割线 -->
     <view style="height:10rpx;background-color:#F3F3F3;"></view>
 
-    <!-- 留言区标头 -->
+    <!-- 评论区标头 -->
     <view class="talk-top">全部评论</view>
 
+    <!-- 分割线 -->
     <view style="height:2rpx;background-color:#F3F3F3;"></view>
 
-    <!-- 留言区 -->
-    <!-- avatar -->
-    <view>
-      <l-card type="avatar" class="user-talk" image="/resources/avatar/avator_girl.png" title="KK" describe="8个小时前"
-        full="true">
-        <!-- 此处为content -->
-        <view class="avter-content">
-          很简单，豆瓣现在这样就给大家指了一条明路:以后凡是这种国产的风口浪尖的的片子
-        </view>
-        <l-tag bg-color="#FFFFFF" slot="more" icon="like" icon-size="30">
-        </l-tag>
-      </l-card>
-      <view style="height:2rpx;background-color:#F3F3F3;"></view>
-    </view>
+    <l-loading class="talk-loading" show="{{talkLoading}}" type="change" size="large" color="#5D85D6"></l-loading>
 
-    <view>
-      <l-card type="avatar" l-class="card" image="/resources/avatar/avator_boy.png" title="SS" describe="10个小时前"
+    <!-- 评论区 -->
+    <view wx:for="{{talkList}}" wx:key="id">
+      <l-card type="avatar" class="user-talk" image="{{item.sex == 0 ? '/resources/avatar/avator_boy.png' : '/resources/avatar/avator_girl.png'}}" title="{{item.username}}" describe="{{item.time + '小时前'}}"
         full="true">
         <!-- 此处为content -->
         <view class="avter-content">
-          很简单，豆瓣现在这样就给大家指了一条明路
-        </view>
-        <l-tag bg-color="#FFFFFF" slot="more" icon="like" icon-size="30">
-        </l-tag>
-      </l-card>
-      <view style="height:2rpx;background-color:#F3F3F3;"></view>
-    </view>
-
-    <view>
-      <l-card type="avatar" l-class="card" image="/resources/avatar/avator_boy.png" title="SS" describe="10个小时前"
-        full="true">
-        <!-- 此处为content -->
-        <view class="avter-content">
-          很简单，豆瓣现在这样就给大家指了一条明路
+          {{item.detail}}
         </view>
         <l-tag bg-color="#FFFFFF" slot="more" icon="like" icon-size="30">
         </l-tag>

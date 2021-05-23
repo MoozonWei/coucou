@@ -103,13 +103,13 @@ Page({
    * 跳转至讨论界面
    */
   navigateToTalk() {
-    wx.request({
-      url: 'https://coucou.com/rooms?data=testData',
-      dataType: 'json',
-      success(res) {
-        console.log(res)
-      }
-    })
+    // wx.request({
+    //   url: 'https://coucou.com/rooms?data=testData',
+    //   dataType: 'json',
+    //   success(res) {
+    //     console.log(res)
+    //   }
+    // })
     let naviUrl = '/pages/talk/talk'
     wx.navigateTo({
       url: naviUrl
