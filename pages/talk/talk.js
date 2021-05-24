@@ -5,9 +5,13 @@ Page({
    * 页面的初始数据
    */
   data: {
-    "talkList" : [],
-    "talkLoading" : true,
-    "joinPopup" : false
+    "talkList": [],
+    "talkLoading": true,
+    "joinPopup": false,
+    "content": "",
+    "show": false,
+    "joinBtnDisabled" : false,
+    "joinBtnText" : "立即参加"
   },
 
   /**
@@ -30,9 +34,18 @@ Page({
 
 
   joinBtnTap() {
-    console.log("sdfsdf")
     this.setData({
       joinPopup: true
+    })
+  },
+
+  showMessage() {
+    this.setData({
+      show: true,
+      content: "提交成功！",
+      joinPopup: false,
+      joinBtnDisabled: true,
+      joinBtnText: "已参加"
     })
   },
 
@@ -40,14 +53,14 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    
+
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    
+
   },
 
   /**

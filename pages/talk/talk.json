@@ -11,7 +11,8 @@
     "l-loadmore" : "/miniprogram_npm/lin-ui/loadmore/index",
     "l-button" : "/miniprogram_npm/lin-ui/button/index",
     "l-loading" : "/miniprogram_npm/lin-ui/loading/index",
-    "l-popup" : "/miniprogram_npm/lin-ui/popup/index"
+    "l-popup" : "/miniprogram_npm/lin-ui/popup/index",
+    "l-message" : "/miniprogram_npm/lin-ui/message/index"
   },
   "navigationBarTitleText": ""
 }
