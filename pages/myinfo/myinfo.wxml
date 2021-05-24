@@ -2,5 +2,16 @@
     <view class="icon" >
         <l-avatar size="200"  placement="bottom" open-data="{{['userAvatarUrl','userNickName']}}"/>
     </view>
+    
+    <view>
+        <image src="/resources/image/font.PNG" mode="heightFix" lazy-load="{{ true }}" style="width: 750rpx; height: 155rpx; display: inline-block; box-sizing: border-box; left: NaNrpx; top: NaNrpx"></image>
+    </view>
+
+    <view class="progress" >
+        <l-progress percent="50" l-slot-class='slot-class' active-color="black" stroke-width='35'>
+            <image src="/resources/image/dog.png" slot='header' style="width:60rpx;height:60rpx;border-radius:50%;display:block;" />
+        </l-progress>
+    </view>
 
 </view>
+

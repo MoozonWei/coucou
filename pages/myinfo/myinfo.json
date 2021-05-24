@@ -1,7 +1,8 @@
 {
   "usingComponents": {
     "l-card": "/miniprogram_npm/lin-ui/card/index",
-    "l-avatar": "/miniprogram_npm/lin-ui/avatar/index"
+    "l-avatar": "/miniprogram_npm/lin-ui/avatar/index",
+    "l-progress": "/miniprogram_npm/lin-ui/progress/index"
   },
   "navigationBarTitleText": "我的"
 }
