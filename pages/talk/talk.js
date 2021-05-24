@@ -7,7 +7,7 @@ Page({
   data: {
     "talkList" : [],
     "talkLoading" : true,
-    "hh" : "asdfsdf"
+    "joinPopup" : false
   },
 
   /**
@@ -25,6 +25,14 @@ Page({
           talkLoading: false
         })
       }
+    })
+  },
+
+
+  joinBtnTap() {
+    console.log("sdfsdf")
+    this.setData({
+      joinPopup: true
     })
   },
 

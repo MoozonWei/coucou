@@ -55,8 +55,9 @@
 
     <!-- 评论区 -->
     <view wx:for="{{talkList}}" wx:key="id">
-      <l-card type="avatar" class="user-talk" image="{{item.sex == 0 ? '/resources/avatar/avator_boy.png' : '/resources/avatar/avator_girl.png'}}" title="{{item.username}}" describe="{{item.time + '小时前'}}"
-        full="true">
+      <l-card type="avatar" class="user-talk"
+        image="{{item.sex == 0 ? '/resources/avatar/avator_boy.png' : '/resources/avatar/avator_girl.png'}}"
+        title="{{item.username}}" describe="{{item.time + '小时前'}}" full="true">
         <!-- 此处为content -->
         <view class="avter-content">
           {{item.detail}}
@@ -74,7 +75,8 @@
 
   <view class="talk-bottom">
     <l-button type="default" shape="semicircle" bg-color="#5D85D6"
-      style="position:absolute;left:15rpx;height:80rpx;top:15rpx" >立即参加</l-button>
+      style="position:absolute;left:15rpx;height:80rpx;top:15rpx" bindtap="joinBtnTap">立即参加</l-button>
+
     <l-button special="{{true}}" style="position:absolute;right: 120rpx; margin-top:15rpx; ">
       <l-icon name="comment" color="#5D85D6"></l-icon>
     </l-button>
@@ -85,5 +87,13 @@
       <l-icon name="to-top" color="#5D85D6"></l-icon>
     </l-button>
   </view>
+
+  <l-popup show="{{joinPopup}}" animation="show" contentAlign="bottom" >
+    <view class='bottom' >
+      <text>请确保您能准时到达，未能赴约将会影响您的信誉。</text>
+      <text>\n</text>
+      <text>请在确认信息后支付相应费用并提交。</text>
+    </view>
+  </l-popup>
 
 </view>
