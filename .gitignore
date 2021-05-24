@@ -11,7 +11,7 @@ $RECYCLE.BIN/
 .Trashes
 
 #idea
-/idea
+.idea/*
 
 # Node.js
 node_modules/
