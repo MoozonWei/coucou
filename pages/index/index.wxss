@@ -1,19 +1,97 @@
 /**index.wxss**/
-.userinfo {
+.search {
+  height: 72rpx;
+  padding: 0 36rpx;
+  margin: 40rpx;
+  border-radius: 20rpx;
+  box-shadow:  20rpx 20rpx 40rpx #e6e6e6,
+             -20rpx -20rpx 40rpx #ffffff;
+  text-align: center;
+  font-size: 32rpx;
+}
+.search-placeholder {
+  color: #e6e6e6;
+}
+
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.homeNav .navScroll {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #aaa;
+  white-space: nowrap;
+  height: 100rpx;
+  padding-top: 10px;
 }
 
-.userinfo-avatar {
+.homeNav .navScroll .navItem {
+  /* padding: 0 30rpx; */
+  font-size: 32rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+
+.homeNav .navScroll .navItem:first-child {
+  margin-left: 40rpx;
+}
+
+.homeNav .navScroll .navItem .navContent {
+  padding: 0 30rpx;
+  border-radius: 30rpx;
+  color: #999999;
+  transition-property: box-shadow ,color;
+  transition-duration: 0.6s;
+  transition-timing-function: ease-in-out;
+}
+
+.homeNav .navScroll .navItem .navContent.active {
+  box-shadow:  9px 9px 18px #e0e0e0,
+             -9px -9px 18px #ffffff;
+  color: black;
+  /* color: white; */
+}
+
+.eventResult {
+
+}
+
+.eventResult .resultItem {
+  box-sizing: border-box;
+  height: 250rpx;
   overflow: hidden;
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+  border-radius: 100rpx;
+  margin: 0 40rpx 60rpx;
+  box-shadow:  20rpx 20rpx 40rpx #e6e6e6,
+             -20rpx -20rpx 40rpx #ffffff;
+
+  padding: 30rpx;
+  position: relative;
 }
 
-.usermotto {
-  margin-top: 200px;
+.eventResult .resultItem image {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  float: left;
+  position: relative;
+  top: 50%;
+  margin-top: -75rpx;
+  margin-left: 10rpx;
+}
+
+.eventResult .resultItem .detailInfo {
+  box-sizing: border-box;
+  float: left;
+  width: 450rpx;
+  font-size: 22rpx;
+  line-height: 35rpx;
+  padding-left: 60rpx;
+  color: gray;
+}
+
+.eventResult .resultItem .detailInfo text:first-child {
+  color: black;
+  line-height: 60rpx;
 }

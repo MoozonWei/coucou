@@ -1,4 +1,41 @@
 <!--index.wxml-->
-<view class="container">
-  
+<input type="text" class="search" placeholder="{{placeholder}}" placeholder-class="search-placeholder"
+  bindfocus="hidePlaceHolder" bindblur="showPlaceHolder" />
+
+<view class="homeNav">
+  <scroll-view scroll-x="true" class="navScroll" enable-flex="true" scroll-left="{{scrollLeft}}"
+    scroll-with-animation="true" enhanced="true" show-scrollbar="false">
+    <view id="{{'scroll' + item.id}}" class="navItem" wx:for="{{navList}}" wx:key="id">
+      <view class="navContent {{itemId === item.id?'active':''}}" id="{{'scrollContent' + item.id}}"
+        bindtap="ItemSelected" data-id="{{item.id}}">
+        {{item.name}}
+      </view>
+    </view>
+  </scroll-view>
+</view>
+
+<view class="eventResult events-recommendation" wx:if="{{resultDis[0]}}">
+  <view class="resultItem " wx:for="{{rooms}}" wx:key="roomID">
+    <image mode="scaleToFill" src="{{item.image}}"></image>
+    <view class="detailInfo">
+      <text style="font-weight: bold;font-size: 32rpx;">房间ID：{{item.roomID}}\n</text>
+      <text style="color:;font-size:;">人数：{{item.numOfPeople}}\n</text>
+      <text style="color:;font-size:;">时间：{{item.time}}\n</text>
+      <text style="color:;font-size:;">地点：{{item.location}}\n</text>
+      <text style="color:;font-size:;">简介：{{item.moreInfo}}\n</text>
+    </view>
+  </view>
+</view>
+
+<view class="eventResult events-recommendation" wx:if="{{resultDis[1]}}">
+  <view class="resultItem " wx:for="{{rooms}}" wx:key="roomID">
+    <image mode="scaleToFill" src="{{item.image}}"></image>
+    <view class="detailInfo">
+      <text style="font-weight: bold;font-size: 32rpx;">房间ID：{{item.roomID}}\n</text>
+      <text style="color:;font-size:;">人数：{{item.numOfPeople}}\n</text>
+      <text style="color:;font-size:;">时间：{{item.time}}\n</text>
+      <text style="color:;font-size:;">地点：{{item.location}}\n</text>
+      <text style="color:;font-size:;">简介：{{item.moreInfo}}\n</text>
+    </view>
+  </view>
 </view>
