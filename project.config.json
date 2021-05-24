@@ -39,7 +39,7 @@
     "minifyWXSS": true
   },
   "compileType": "miniprogram",
-  "libVersion": "2.9.5",
+  "libVersion": "2.14.1",
   "appid": "wxd86cbcc9cf4be49b",
   "projectname": "coucou",
   "debugOptions": {

@@ -10,6 +10,9 @@ $RECYCLE.BIN/
 .TemporaryItems
 .Trashes
 
+#idea
+/idea
+
 # Node.js
 node_modules/
 

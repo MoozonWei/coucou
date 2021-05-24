@@ -1,4 +1,7 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "l-card": "/miniprogram_npm/lin-ui/card/index",
+    "l-avatar": "/miniprogram_npm/lin-ui/avatar/index"
+  },
   "navigationBarTitleText": "我的"
 }
