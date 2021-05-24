@@ -1,6 +1,8 @@
 {
   "pages": [
     "pages/home/home",
+    "pages/talk/talk",
+    "pages/rooms/rooms",
     "pages/index/index",
     "pages/myinfo/myinfo",
     "pages/usrInfo/usrInfo"
@@ -14,7 +16,8 @@
   "style": "v2",
   "sitemapLocation": "sitemap.json",
   "tabBar": {
-    "list": [{
+    "list": [
+      {
         "pagePath": "pages/home/home",
         "text": "",
         "iconPath": "resources/icon/home.png",
@@ -31,12 +34,10 @@
         "text": "",
         "iconPath": "resources/icon/bussiness-man.png",
         "selectedIconPath": "resources/icon/bussiness-man-fill.png"
-
       }
     ]
   },
   "useExtendedLib": {
-    "kbone": true,
     "weui": true
   }
 }

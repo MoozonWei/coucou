@@ -1,16 +1,36 @@
 /* pages/home/home.wxss */
-.homeNav .navScroll {
-  display: flex;
-  white-space: nowrap;
+
+/* 高度铺满屏幕 */
+page {
+  height: 100%;
 }
 
-.homeNav .navScroll .navItem {
-  padding: 0 30rpx;
-  font-size: 32rpx;
-  height: 60rpx;
-  line-height: 60rpx;
+/* 隐藏scroll-view的滚动条 */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
 }
 
-.homeNav .navScroll .navItem .active {
-  border-bottom: 3rpx solid blue;
+.homeContainer {
+  height: 100%;
+}
+
+.contentCard {
+  margin-top: 10rpx;
+}
+
+.cardList {
+  padding-top: 5rpx;
+  padding-bottom: 5rpx;
+}
+
+/* 设置卡片中的图片大小 */
+.cardList .right-card {
+  height: 100rpx;
+}
+
+.cardText {
+  padding-top: 20rpx;
+  font-size: 40rpx;
 }

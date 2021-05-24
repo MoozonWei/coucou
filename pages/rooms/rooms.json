@@ -5,7 +5,9 @@
     "l-tabs": "/miniprogram_npm/lin-ui/tabs/index",
     "l-tabpanel": "/miniprogram_npm/lin-ui/tabpanel/index",
     "l-segment": "/miniprogram_npm/lin-ui/segment/index",
-    "l-segment-item": "/miniprogram_npm/lin-ui/segment-item/index"
+    "l-segment-item": "/miniprogram_npm/lin-ui/segment-item/index",
+    "l-tag": "/miniprogram_npm/lin-ui/tag/index",
+    "l-icon" : "/miniprogram_npm/lin-ui/icon/index"
   },
-  "navigationBarTitleText": "首页"
+  "navigationBarTitleText": "房间"
 }
