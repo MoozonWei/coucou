@@ -74,3 +74,27 @@ page {
   height: 100rpx;
   width: 100%;
 }
+
+.bottom {
+  width: 100%;
+  background: #fff;
+  height: 200rpx;
+  overflow: hidden;
+  text-align: center;
+  /* line-height: 300rpx; */
+  font-size: 32rpx;
+  color: #555;
+  border-top-left-radius: 12rpx;
+  border-top-right-radius: 12rpx;
+}
+
+.bottom-button {
+  width: 100%;
+  background: #fff;
+  height: 100rpx;
+  overflow: hidden;
+  text-align: center;
+  /* line-height: 300rpx; */
+  font-size: 32rpx;
+  color: #555;
+}
