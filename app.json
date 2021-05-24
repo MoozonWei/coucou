@@ -1,35 +1,43 @@
 {
-  "pages":[
+  "pages": [
+    "pages/home/home",
+    "pages/talk/talk",
+    "pages/rooms/rooms",
     "pages/index/index",
+    "pages/myinfo/myinfo",
     "pages/usrInfo/usrInfo"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "凑凑",
-    "navigationBarTextStyle":"black"
-  },
-  "tabBar": {
-    "borderStyle": "white",
-    "list": [{
-      "pagePath": "pages/index/index",
-      "text": "",
-      "iconPath": "resources/icon/home.png",
-      "selectedIconPath": "resources/icon/home-fill.png"
-    },
-    {
-      "pagePath": "pages/index/index",
-      "text": "",
-      "iconPath": "resources/icon/add.png",
-      "selectedIconPath": "resources/icon/add-fill.png"
-    },
-    {
-      "pagePath": "pages/usrInfo/usrInfo",
-      "text": "",
-      "iconPath": "resources/icon/bussiness-man.png",
-      "selectedIconPath": "resources/icon/bussiness-man-fill.png"
-    }]
+    "navigationBarTextStyle": "black"
   },
   "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "",
+        "iconPath": "resources/icon/home.png",
+        "selectedIconPath": "resources/icon/home-fill.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "",
+        "iconPath": "resources/icon/add.png",
+        "selectedIconPath": "resources/icon/add-fill.png"
+      },
+      {
+        "pagePath": "pages/myinfo/myinfo",
+        "text": "",
+        "iconPath": "resources/icon/bussiness-man.png",
+        "selectedIconPath": "resources/icon/bussiness-man-fill.png"
+      }
+    ]
+  },
+  "useExtendedLib": {
+    "weui": true
+  }
 }

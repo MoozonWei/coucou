@@ -1,0 +1,13 @@
+{
+  "usingComponents": {
+    "l-card": "/miniprogram_npm/lin-ui/card/index",
+    "l-search-bar": "/miniprogram_npm/lin-ui/search-bar/index",
+    "l-tabs": "/miniprogram_npm/lin-ui/tabs/index",
+    "l-tabpanel": "/miniprogram_npm/lin-ui/tabpanel/index",
+    "l-segment": "/miniprogram_npm/lin-ui/segment/index",
+    "l-segment-item": "/miniprogram_npm/lin-ui/segment-item/index",
+    "l-tag": "/miniprogram_npm/lin-ui/tag/index",
+    "l-icon" : "/miniprogram_npm/lin-ui/icon/index"
+  },
+  "navigationBarTitleText": "房间"
+}

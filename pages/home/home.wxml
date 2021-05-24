@@ -1,0 +1,30 @@
+<!--pages/home/home.wxml-->
+<view class="homeContainer">
+
+  <!-- 顶部搜索栏 -->
+  <l-search-bar placeholder="请输入活动名称 ..." front-text="北京" show-cancel="{{false}}" shape="circle"></l-search-bar>
+
+  <!-- 顶部导航栏 -->
+  <l-tabs bind:linchange="changeTabs" equal-width="{{false}}" scrollable="{{true}}" animated="true" swipeable="true"
+    animated-for-line="true">
+
+    <!-- 导航栏标签 -->
+    <l-tabpanel wx:for="{{navList}}" wx:key="id" tab="{{item.name}}" key="{{item.id}}" slot="{{item.id}}"
+      data-id="hello">
+
+      <!-- 列表内容scroll -->
+      <view class="contentCard" style="height: auto">
+        <scroll-view class="cardScroll" style="height: auto">
+          <view class="cardList" wx:for="{{currList}}" wx:key="id">
+            <l-card class="l-card" type="primary" position="right" l-img-class="right-card"
+              image="/resources/icon/arraw.png" image-mode="right" bindtap="navigateToRoom" data-name="{{item.name}}">
+              <view class="cardText">{{item.name}}</view>
+            </l-card>
+          </view>
+        </scroll-view>
+      </view>
+
+    </l-tabpanel>
+  </l-tabs>
+
+</view>
