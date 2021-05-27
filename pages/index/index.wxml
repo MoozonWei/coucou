@@ -1,26 +1,50 @@
 <!--index.wxml-->
 <view class="index-container">
-  <l-input label="标题" placeholder="请输入标题" />
-  <l-input label="简述" placeholder="请输入简述" />
+
+  <view class="index-header">
+    <text>创建房间</text>
+  </view>
+
+  <l-input label="房间标题" placeholder="请输入标题" />
+  <l-input label="活动简述" placeholder="请输入简述" />
   <l-input label="详细信息" placeholder="请输入详细信息" />
   <l-input label="人数" placeholder="请输入人数" />
 
   <view class="section">
-    <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
-      <view class="picker">
-        日期: {{date}}
+    <picker class="section-picker" mode="date" value="{{date}}" start="2021-6-01" end="2021-12-01"
+      bindchange="bindDateChange">
+      <view class="picker-content">
+        <view class="row"></view>
+        <view class="picker-title">
+          日期
+        </view>
+        <view class="picker-value">{{date}}</view>
       </view>
     </picker>
+
   </view>
 
   <view class="section">
-    <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
-      <view class="picker">
-        时间: {{time}}
+    <picker class="section-picker" mode="time" value="{{time}}" start="00:00" end="23:59" bindchange="bindTimeChange">
+      <view class="picker-content">
+        <view class="row"></view>
+        <view class="picker-title">
+          时间
+        </view>
+        <view class="picker-value">{{time}}</view>
       </view>
     </picker>
   </view>
 
-  <l-button bindtap="chooseMap">Map</l-button>
+  <view class="picker-content" bindtap="chooseMap">
+    <view class="row"></view>
+    <view class="picker-title">
+      位置
+    </view>
+    <view class="picker-value">{{address}}</view>
+  </view>
 
+  <view class="button-container">
+    <l-button>创建房间</l-button>
+  </view>
 </view>

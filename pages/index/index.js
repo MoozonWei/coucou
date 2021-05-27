@@ -1,9 +1,13 @@
 // index.js
 // 获取应用实例
 
+const chooseLocation = requirePlugin('chooseLocation')
+
 Page({
   data: {
-
+    "time" : "请选择时间",
+    "date" : "请选择日期",
+    "address" : "请选择位置"
   },
 
   chooseMap() {
@@ -18,5 +22,37 @@ Page({
     wx.navigateTo({
       url: 'plugin://chooseLocation/index?key=' + key + '&referer=' + referer + '&location=' + location + '&category=' + category
     });
+  },
+
+
+  bindTimeChange(e) {
+    console.log("时间已选择")
+    this.setData({
+      time : e.detail.value
+    })
+  },
+
+
+  bindDateChange(e) {
+    console.log("日期已选择")
+    this.setData({
+      date : e.detail.value
+    })
+  },
+
+
+  onShow () {
+    location = chooseLocation.getLocation()
+    if (location != null) {
+      this.setData({
+        address: location.address
+      })
+      console.log(location.address)
+    }
+  },
+
+  onUnload() {
+    console.log("set null")
+    chooseLocation.setLocation(null)
   }
 })
