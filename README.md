@@ -68,4 +68,10 @@
 </figure>
 
 
+# v 1.0.2
 
+新建页面
+
+<figure>
+    <img src="./resources/image/index.png" width="400">
+</figure>
