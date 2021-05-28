@@ -1,50 +1,66 @@
 <!--index.wxml-->
 <view class="index-container">
 
+<l-transition show="{{bodyShow}}" name="slip-down" duration="6000"></l-transition>
+  <view class="top-header"></view>
+
   <view class="index-header">
     <text>创建房间</text>
   </view>
 
-  <l-input label="房间标题" placeholder="请输入标题" />
-  <l-input label="活动简述" placeholder="请输入简述" />
-  <l-input label="详细信息" placeholder="请输入详细信息" />
-  <l-input label="人数" placeholder="请输入人数" />
+  <view class="index-body">
+    <l-transition class="transition" name="slide-up" show="{{bodyShow}}" bind:linafterenter="showButton" duration="1000">
+      <view class="body-header"></view>
 
-  <view class="section">
-    <picker class="section-picker" mode="date" value="{{date}}" start="2021-6-01" end="2021-12-01"
-      bindchange="bindDateChange">
-      <view class="picker-content">
-        <view class="row"></view>
-        <view class="picker-title">
-          日期
+      <view class="body-main">
+        <l-input label="房间标题" placeholder="请输入标题" />
+        <l-input label="活动简述" placeholder="请输入简述" />
+        <l-input label="详细信息" placeholder="请输入详细信息" />
+        <l-input label="人数" placeholder="请输入人数" />
+
+        <view class="section">
+          <picker class="section-picker" mode="date" value="{{date}}" start="2021-6-01" end="2021-12-01"
+            bindchange="bindDateChange">
+            <view class="picker-content">
+              <view class="row"></view>
+              <view class="picker-title">
+                日期
+              </view>
+              <view class="picker-value">{{date}}</view>
+            </view>
+          </picker>
         </view>
-        <view class="picker-value">{{date}}</view>
-      </view>
-    </picker>
 
-  </view>
-
-  <view class="section">
-    <picker class="section-picker" mode="time" value="{{time}}" start="00:00" end="23:59" bindchange="bindTimeChange">
-      <view class="picker-content">
-        <view class="row"></view>
-        <view class="picker-title">
-          时间
+        <view class="section">
+          <picker class="section-picker" mode="time" value="{{time}}" start="00:00" end="23:59"
+            bindchange="bindTimeChange">
+            <view class="picker-content">
+              <view class="row"></view>
+              <view class="picker-title">
+                时间
+              </view>
+              <view class="picker-value">{{time}}</view>
+            </view>
+          </picker>
         </view>
-        <view class="picker-value">{{time}}</view>
+
+        <view class="picker-content" bindtap="chooseMap">
+          <view class="row"></view>
+          <view class="picker-title">
+            位置
+          </view>
+          <view class="picker-value">{{address}}</view>
+        </view>
       </view>
-    </picker>
+
+      <view class="button-container">
+        <l-transition show="{{buttonShow}}" name="fade">
+          <view class="button-view">
+            <l-button width="700">创建房间</l-button>
+          </view>
+        </l-transition>
+      </view>
+    </l-transition>
   </view>
 
-  <view class="picker-content" bindtap="chooseMap">
-    <view class="row"></view>
-    <view class="picker-title">
-      位置
-    </view>
-    <view class="picker-value">{{address}}</view>
-  </view>
-
-  <view class="button-container">
-    <l-button>创建房间</l-button>
-  </view>
 </view>

@@ -2,7 +2,8 @@
   "usingComponents": {
     "l-input" : "/miniprogram_npm/lin-ui/input/index",
     "l-button" : "/miniprogram_npm/lin-ui/button/index",
-    "l-card" : "/miniprogram_npm/lin-ui/card/index"
+    "l-card" : "/miniprogram_npm/lin-ui/card/index",
+    "l-transition" : "/miniprogram_npm/lin-ui/transition/index"
   },
   "navigationBarTitleText": "凑凑"
 }

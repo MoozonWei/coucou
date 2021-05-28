@@ -7,7 +7,9 @@ Page({
   data: {
     "time" : "请选择时间",
     "date" : "请选择日期",
-    "address" : "请选择位置"
+    "address" : "请选择位置",
+    "bodyShow" : false,
+    "buttonShow" : false
   },
 
   chooseMap() {
@@ -22,6 +24,13 @@ Page({
     wx.navigateTo({
       url: 'plugin://chooseLocation/index?key=' + key + '&referer=' + referer + '&location=' + location + '&category=' + category
     });
+  },
+
+  showButton() {
+    console.log("HHHHH")
+    this.setData({
+      buttonShow: true
+    })
   },
 
 
@@ -40,9 +49,14 @@ Page({
     })
   },
 
-
+  /**
+   * 生命周期函数--监听页面显示
+   */
   onShow () {
     location = chooseLocation.getLocation()
+    this.setData({
+      bodyShow: true
+    })
     if (location != null) {
       this.setData({
         address: location.address
@@ -51,8 +65,59 @@ Page({
     }
   },
 
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
   onUnload() {
-    console.log("set null")
     chooseLocation.setLocation(null)
+  },
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   * 初始化当前列表为推荐列表
+   */
+  onReady: function () {
+    this.setData({
+      bodyShow: true
+    })
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+    this.setData({
+      bodyShow: false,
+      buttonShow: false
+    })
+  },
+
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
   }
 })

@@ -1,4 +1,18 @@
 /**index.wxss**/
+page {
+  height: 100%;
+  background: #E6E6E6;
+}
+
+.top-header {
+  background: white;
+  /* box-shadow: inset 0 5rpx 5rpx rgba(0, 0, 0, 0.05); */
+  border-bottom-left-radius: 40rpx;
+  border-bottom-right-radius: 40rpx;
+  width: 100%;
+  height: 60rpx;
+}
+
 .index-container {
   height: 100%;
 }
@@ -7,28 +21,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #E6E6E6;
   width: 100%;
-  height: 200rpx;
-}
-
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #aaa;
-}
-
-.userinfo-avatar {
-  overflow: hidden;
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-}
-
-.usermotto {
-  margin-top: 200px;
+  height: 150rpx;
+  width: 100%;
+  height: 150rpx;
 }
 
 .picker-content {
@@ -73,10 +69,41 @@
 
 .button-container {
   position: fixed;
-  margin-bottom: 50rpx;
   width: 100%;
-  bottom: 0;
+  height: 100%;
+  background: white;
+  /* height: 100%; */
+}
+
+.button-view {
+  background:white;
+  width: 100%;
+  position: fixed;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  bottom: 50rpx;
+}
+
+.index-body {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+}
+
+.body-header {
+  background: white;
+  box-shadow: inset 0 5rpx 5rpx rgba(0, 0, 0, 0.05);
+  border-top-left-radius: 40rpx;
+  border-top-right-radius: 40rpx;
+  width: 100%;
+  height: 40rpx;
+}
+
+.body-main {
+  background: white;
+}
+
+.transition {
+  height: 100%;
 }
