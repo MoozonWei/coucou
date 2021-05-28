@@ -60,5 +60,13 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  btn1: function (val) {
+    console.log(val);
+  },
+
+  btn2: function (val) {
+    console.log(val);
   }
 })

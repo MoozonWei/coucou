@@ -1,16 +1,23 @@
-<view>
-    <view class="icon" >
-        <l-avatar size="200"  placement="bottom" open-data="{{['userAvatarUrl','userNickName']}}"/>
+<view class="view_main">
+    <view class="view_1" >
+        <l-avatar class="icon" size="200"  placement="bottom" open-data="{{['userAvatarUrl','userNickName']}}"/>
     </view>
     
-    <view>
-        <image src="/resources/image/font.PNG" mode="heightFix" lazy-load="{{ true }}" style="width: 750rpx; height: 155rpx; display: inline-block; box-sizing: border-box; left: NaNrpx; top: NaNrpx"></image>
+    <view class="view_2">
+        <image src="/resources/image/font.png" lazy-load="{{ true }}" style="width: 750rpx; height: 155rpx; display: block"></image>
     </view>
 
-    <view class="progress" >
-        <l-progress percent="50" l-slot-class='slot-class' active-color="black" stroke-width='35'>
-            <image src="/resources/image/dog.png" slot='header' style="width:60rpx;height:60rpx;border-radius:50%;display:block;" />
-        </l-progress>
+    <view class="view_3">
+        <image src="/resources/image/star.png" lazy-load="{{ true }}" class="star"></image>
+        <image src="/resources/image/star.png" lazy-load="{{ true }}" class="star"></image>
+        <image src="/resources/image/star.png" lazy-load="{{ true }}" class="star"></image>
+        <image src="/resources/image/star.png" lazy-load="{{ true }}" class="star"></image>
+        <image src="/resources/image/un_star.png" lazy-load="{{ true }}" class="star"></image>
+    </view>
+
+    <view class="view_4">
+        <image src="/resources/image/join.png" class="button" bindtap="btn1"></image>
+        <image src="/resources/image/to_join.png" class="button" bindtap="btn2"></image>
     </view>
 
 </view>
