@@ -1,4 +1,4 @@
-<view class="view_contain">
+<view class="view_main">
     <view class="view_1" >
         <l-avatar class="icon" size="200"  placement="bottom" open-data="{{['userAvatarUrl','userNickName']}}"/>
     </view>
@@ -7,7 +7,18 @@
         <image src="/resources/image/font.png" lazy-load="{{ true }}" style="width: 750rpx; height: 155rpx; display: block"></image>
     </view>
 
+    <view class="view_3">
+        <image src="/resources/image/star.png" lazy-load="{{ true }}" class="star"></image>
+        <image src="/resources/image/star.png" lazy-load="{{ true }}" class="star"></image>
+        <image src="/resources/image/star.png" lazy-load="{{ true }}" class="star"></image>
+        <image src="/resources/image/star.png" lazy-load="{{ true }}" class="star"></image>
+        <image src="/resources/image/un_star.png" lazy-load="{{ true }}" class="star"></image>
+    </view>
 
+    <view class="view_4">
+        <image src="/resources/image/join.png" class="button" bindtap="btn1"></image>
+        <image src="/resources/image/to_join.png" class="button" bindtap="btn2"></image>
+    </view>
 
 </view>
 
