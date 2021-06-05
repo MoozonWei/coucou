@@ -10,31 +10,36 @@
       full="true">
       <!-- 此处为content -->
       <view class="avter-content">
-        <text>乒乓球是一种由两名或四名运动员用小球拍（即乒乓球拍）在桌子上来回击打一个轻便的球，或是用乒乓球拍拍打乒乓球的球类运动，在世界上许多地方流行。</text>
+        <text>{{talkList.detail}}</text>
         <view class="talk-info">
           <l-icon name="time" size="28"></l-icon>
           <text class="talk-info-text" space="nbsp"> 时间：</text>
-          <text>2021/6/1</text>
+          <text>{{talkList.date}}</text>
         </view>
         <view class="talk-info">
           <l-icon name="address" size="28"></l-icon>
           <text class="talk-info-text" space="nbsp"> 地点：</text>
-          <text>校内体育馆</text>
+          <text>{{talkList.address}}</text>
         </view>
         <view class="talk-info">
           <l-icon name="order" size="28"></l-icon>
           <text class="talk-info-text" space="nbsp"> 费用：</text>
-          <text>60元</text>
+          <text>{{talkList.price}}元</text>
+        </view>
+        <view class="talk-info">
+          <l-icon name="user" size="28"></l-icon>
+          <text class="talk-info-text" space="nbsp"> 男女：</text>
+          <text>{{talkList.limit}}</text>
         </view>
       </view>
       <view class="avter-share-container">
         <view class="like-container">
           <l-icon name="like" color="#666" size="28" />
-          <view class="number">人数：1/4</view>
+          <view class="number">人数：{{talkList.count}}</view>
         </view>
         <view class="like-container">
           <l-icon name="default" color="#666" size="28" />
-          <view class="number">{{talkList.length}}评论</view>
+          <view class="number">{{commentList.length}}评论</view>
         </view>
       </view>
       <l-tag shape="circle" bg-color="#f3f3f3" font-color="#3963BC" slot="more" size="large">
@@ -51,10 +56,10 @@
     <!-- 分割线 -->
     <view style="height:2rpx;background-color:#F3F3F3;"></view>
 
-    <l-loading class="talk-loading" show="{{talkLoading}}" type="change" size="large" color="#5D85D6"></l-loading>
+    <!-- <l-loading class="talk-loading" show="{{talkLoading}}" type="change" size="large" color="#5D85D6"></l-loading> -->
 
     <!-- 评论区 -->
-    <view wx:for="{{talkList}}" wx:key="id">
+    <view wx:for="{{commentList}}" wx:key="id">
       <l-card type="avatar" class="user-talk"
         image="{{item.sex == 0 ? '/resources/avatar/avator_boy.png' : '/resources/avatar/avator_girl.png'}}"
         title="{{item.username}}" describe="{{item.time + '小时前'}}" full="true">
@@ -100,5 +105,5 @@
     </view>
   </l-popup>
 
-  <l-message type="success" duration="1500" show="{{show}}" content="{{content}}"></l-message>
+  <l-message type="{{showType}}" duration="1500" show="{{show}}" content="{{content}}"></l-message>
 </view>

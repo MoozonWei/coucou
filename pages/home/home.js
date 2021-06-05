@@ -48,70 +48,90 @@ Page({
     }],
     "recommedList" : [{
       "id" : 0,
-      "name" : "乒乓球"
+      "name" : "乒乓球",
+      "src" : "/resources/navicon/乒乓球.png"
     }, {
       "id" : 1,
-      "name" : "羽毛球"
+      "name" : "羽毛球",
+      "src" : "/resources/navicon/羽毛球.png"
+    }, {
+      "id" : 2,
+      "name" : "剧本杀",
+      "src" : "/resources/navicon/剧本杀.png"
     }],
     "followList" : [{
       "id": 0,
-      "name" : "网球"
+      "name" : "网球",
+      "src" : "/resources/navicon/网球.png"
     }],
     "learnList" : [{
       "id" : 0,
-      "name" : "数学"
+      "name" : "数学",
+      "src" : "/resources/navicon/数学.png"
     },{
       "id" : 1,
-      "name": "物理"
+      "name": "物理",
+      "src" : "/resources/navicon/物理.png"
     },{
       "id" : 2,
-      "name": "化学"
+      "name": "化学",
+      "src" : "/resources/navicon/化学.png"
     }],
     "sportsList": [{
       "id" : 1,
-      "name" : "乒乓球"
+      "name" : "乒乓球",
+      "src" : "/resources/navicon/乒乓球.png"
     },{
       "id" : 2,
-      "name" : "羽毛球"
+      "name" : "羽毛球",
+      "src" : "/resources/navicon/羽毛球.png"
     },{
       "id" : 3,
-      "name" : "网球"
+      "name" : "网球",
+      "src" : "/resources/navicon/网球.png"
     },{
       "id" : 4,
-      "name" : "篮球"
+      "name" : "篮球",
+      "src" : "/resources/navicon/篮球.png"
     },{
       "id" : 5,
-      "name" : "足球"
+      "name" : "足球",
+      "src" : "/resources/navicon/足球.png"
     },{
       "id" : 6,
-      "name" : "排球"
-    },{
-      "id" : 7,
-      "name" : "跑步"
+      "name" : "排球",
+      "src" : "/resources/navicon/排球.png"
     }],
     "graduateList" : [],
     "bookList" :[],
     "movieList" : [{
       "id" : 0,
-      "name" : "科幻"
+      "name" : "科幻",
+      "src" : ""
     },{
       "id" : 1,
-      "name" : "奇幻"
+      "name" : "奇幻",
+      "src" : ""
     },{
       "id" : 2,
-      "name" : "爱情"
+      "name" : "爱情",
+      "src" : ""
     },{
       "id" : 3,
-      "name" : "动作"
+      "name" : "动作",
+      "src" : ""
     },{
       "id" : 4,
-      "name" : "悬疑"
+      "name" : "悬疑",
+      "src" : ""
     },{
       "id" : 5,
-      "name" : "战争"
+      "name" : "战争",
+      "src" : ""
     },{
       "id" : 6,
-      "name" : "喜剧"
+      "name" : "喜剧",
+      "src" : ""
     }],
     "testList" : [],
     "currList" : [],
