@@ -18,6 +18,8 @@
         <l-input label="详细信息" placeholder="请输入详细信息" />
         <l-input label="人数" placeholder="请输入人数" />
 
+        <l-input label="男女比例" placeholder="请输入男女比例，用:隔开" />
+
         <view class="section">
           <picker class="section-picker" mode="date" value="{{date}}" start="2021-6-01" end="2021-12-01"
             bindchange="bindDateChange">
